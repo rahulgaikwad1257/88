@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirect</title>
+</head>
+<body>
+  <script>
+    // Get the POST parameters from the current URL
+    const params = new URLSearchParams(document.location.search.substring(1));
+ 
+    // Build the new URL with the POST parameters
+    const newUrl = "https://mahavahn.com/certificates/AVE/scanReport.php?" + params.toString();
+
+    // Redirect the user to the new URL
+    window.location.replace(newUrl);
+  </script>
+</body>
+</html>
