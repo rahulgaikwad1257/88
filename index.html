@@ -5,16 +5,14 @@
 </head>
 <body>
   <script>
-    function redirect() {
-      // Parse the POST parameters
-      const params = new URLSearchParams(document.location.search.substring(1));
+    // Get the POST parameters from the current URL
+    const params = new URLSearchParams(document.location.search.substring(1));
+ 
+    // Build the new URL with the POST parameters
+    const newUrl = "https://mahavahn.com/certificates/AVE/scanReport.php?" + params.toString();
 
-      // Get the value of the "url" parameter
-      const url = params.get("url");
-
-      // Redirect the user to the URL
-      window.location.replace(url);
-    }
+    // Redirect the user to the new URL
+    window.location.replace(newUrl);
   </script>
 </body>
 </html>
